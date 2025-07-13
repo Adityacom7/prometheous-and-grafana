@@ -1,0 +1,6 @@
+##to be addein prometheous.yml
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ['localhost:9093']

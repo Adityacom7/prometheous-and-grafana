@@ -1,0 +1,17 @@
+groups:
+- name: node-alerts
+  rules:
+  - alert: HighCPUUsage
+    expr: avg(rate(node_cpu_seconds_total{mode="user"}[1m])) > 0.7
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High CPU detected"
+      description: "CPU usage above 70% for 1 minute"
+
+
+      rule_files:
+  - "alert.rules.yml"
+
+#put refference in prometheous config file

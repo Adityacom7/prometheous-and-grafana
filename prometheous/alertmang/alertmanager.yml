@@ -1,0 +1,13 @@
+global:
+  smtp_smarthost: 'smtp.gmail.com:587'
+  smtp_from: '@gmail.com'
+  smtp_auth_username: ''
+  smtp_auth_password: ''
+
+route:
+  receiver: ''
+
+receivers:
+  - name: ''
+    email_configs:
+      - to: ''
